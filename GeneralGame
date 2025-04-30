@@ -1,0 +1,15 @@
+public class GeneralGame extends Game {
+    private boolean isGameOver;
+    public GeneralGame(int boardSize) {
+        super(boardSize);
+    }
+
+    public void makeMove(int row, int col, String symbol) {
+        super.getGameBoard()[row][col] = symbol;
+    }
+
+    public boolean isGameOver() {
+        isGameOver = isBoardFull();
+        return isGameOver;
+    }
+}
